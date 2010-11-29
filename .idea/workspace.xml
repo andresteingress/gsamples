@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b7f3e9a-8fb9-43cb-8f24-e3d3f186a47a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mini/MiniSpring.groovy" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mini/MiniHibernate.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mini/MiniSpring.groovy" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/mini/MiniHibernate.groovy" afterPath="$PROJECT_DIR$/src/micro/MicroHibernate.groovy" />
     </list>
     <ignored path="gsamples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,10 +63,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MiniSpring.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mini/MiniSpring.groovy">
+      <file leaf-file-name="MicroSpring.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/micro/MicroSpring.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="62" selection-start="1784" selection-end="1784" vertical-scroll-proportion="0.6315789">
+            <state line="67" column="18" selection-start="1653" selection-end="1653" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MicroHibernate.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/micro/MicroHibernate.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="101" column="19" selection-start="2563" selection-end="2563" vertical-scroll-proportion="0.66842103">
               <folding />
             </state>
           </provider>
@@ -109,6 +120,8 @@
         <option value="$PROJECT_DIR$/src/mini/MiniHibernate.groovy" />
         <option value="$PROJECT_DIR$/src/essentials/Groovy Closures, Syntactic Sugar and MOP.groovy" />
         <option value="$PROJECT_DIR$/src/mini/MiniSpring.groovy" />
+        <option value="$PROJECT_DIR$/src/micro/MiniSpring.groovy" />
+        <option value="$PROJECT_DIR$/src/micro/MicroHibernate.groovy" />
       </list>
     </option>
   </component>
@@ -178,8 +191,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mini" />
+              <option name="myItemId" value="micro" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gsamples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gsamples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="micro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MicroHibernate.groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -252,7 +287,7 @@
       <recent name="essentials" />
     </key>
   </component>
-  <component name="RunManager" selected="Groovy Script.MiniSpring">
+  <component name="RunManager" selected="Groovy Script.MicroHibernate">
     <configuration default="false" name="MiniHibernate" type="GroovyScriptRunConfiguration" factoryName="Groovy Script" temporary="true">
       <module name="Gsamples" />
       <setting name="path" value="$PROJECT_DIR$/src/mini/MiniHibernate.groovy" />
@@ -270,6 +305,28 @@
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="$PROJECT_DIR$/src/mini" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MicroSpring" type="GroovyScriptRunConfiguration" factoryName="Groovy Script" temporary="true">
+      <module name="Gsamples" />
+      <setting name="path" value="$PROJECT_DIR$/src/micro/MicroSpring.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$/src/micro" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MicroHibernate" type="GroovyScriptRunConfiguration" factoryName="Groovy Script" temporary="true">
+      <module name="Gsamples" />
+      <setting name="path" value="$PROJECT_DIR$/src/micro/MicroHibernate.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$/src/micro" />
       <setting name="debug" value="false" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -400,9 +457,11 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="2">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Groovy Script.MiniHibernate" />
       <item index="1" class="java.lang.String" itemvalue="Groovy Script.MiniSpring" />
+      <item index="2" class="java.lang.String" itemvalue="Groovy Script.MicroSpring" />
+      <item index="3" class="java.lang.String" itemvalue="Groovy Script.MicroHibernate" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -428,7 +487,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="22" width="1624" height="1016" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -502,13 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mini/MiniHibernate.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="26" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/essentials/Groovy Closures, Syntactic Sugar and MOP.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="103" column="37" selection-start="1990" selection-end="1990" vertical-scroll-proportion="0.13970588">
@@ -516,9 +568,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mini/MiniSpring.groovy">
+    <entry file="file://$PROJECT_DIR$/src/micro/MicroSpring.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="62" selection-start="1784" selection-end="1784" vertical-scroll-proportion="0.6315789">
+        <state line="67" column="18" selection-start="1653" selection-end="1653" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/micro/MicroHibernate.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="19" selection-start="2563" selection-end="2563" vertical-scroll-proportion="0.66842103">
           <folding />
         </state>
       </provider>

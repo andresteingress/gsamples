@@ -1,4 +1,4 @@
-package mini
+package micro
 
 class ImageService {
 
@@ -30,11 +30,11 @@ def void init()  {
 
 def configFile = """
    <beans>
-      <bean id='imageService' class='mini.ImageService'>
+      <bean id='imageService' class='micro.ImageService'>
           <property name='imageLibraryServiceFacade' ref='nativeImageLibraryFacade'/>
       </bean>
 
-      <bean id='nativeImageLibraryFacade' class='mini.ImageOperationsWithImageIOImpl'/>
+      <bean id='nativeImageLibraryFacade' class='micro.ImageOperationsWithImageIOImpl'/>
    </beans>
 """
 

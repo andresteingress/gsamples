@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b7f3e9a-8fb9-43cb-8f24-e3d3f186a47a" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Groovy Closures, Syntactic Sugar and MOP.groovy" afterPath="$PROJECT_DIR$/src/essentials/Groovy Closures, Syntactic Sugar and MOP.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Groovy Essential Data Types and Control Structures.groovy" afterPath="$PROJECT_DIR$/src/essentials/Groovy Essential Data Types and Control Structures.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/MiniHibernate.groovy" afterPath="$PROJECT_DIR$/src/mini/MiniHibernate.groovy" />
-    </list>
+    <list default="true" id="0b7f3e9a-8fb9-43cb-8f24-e3d3f186a47a" name="Default" comment="" />
     <ignored path="gsamples.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />

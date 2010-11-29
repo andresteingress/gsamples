@@ -1,3 +1,4 @@
+package essentials
 // Closures
 
 def doubleNum = { num -> num * 2 }
@@ -79,9 +80,9 @@ def invokeMethod(String name, args){
 println "$name invoked!"
 }
 }
-def obj = new DynamicObject()
-obj.foo()
-obj.bar()
+def o = new DynamicObject()
+o.foo()
+o.bar()
 
 // set/getProperty
 

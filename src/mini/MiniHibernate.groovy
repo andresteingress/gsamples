@@ -1,7 +1,4 @@
-class Person {
-
-  String name
-}
+package mini
 
 class SessionFactory  {
 
@@ -85,7 +82,8 @@ class Session {
   }
 }
 
-println "Creating test data"
+class Person { String name }
+
 def storage = [:]
 storage[Person.class] = [:]
 storage[Person.class][1l] = new Person(name: 'Max Mustermann')

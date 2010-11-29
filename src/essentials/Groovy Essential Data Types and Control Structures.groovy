@@ -1,8 +1,10 @@
+package essentials
+
 System.out.println("Hello, World!");
 
 println 'Hello, World!'
 
-String name = 'Andre Steingress';
+String typedName = 'Andre Steingress';
 def name = 'Andre Steingress'
 
 println "Hi, my name is ${name}!"
@@ -140,8 +142,8 @@ assert letters.size() + numbers.size() == 36
 
 // Support for Java Features
 
-Anonymous Classes
-Annotations
+// Anonymous Classes
+// Annotations
 
 import java.lang.annotation.*
 
@@ -152,15 +154,15 @@ public @interface PerformanceMonitored {
 }
 
 @PerformanceMonitored('fast')
-class Person {
+class AnotherPerson {
    String name
 
 }
 
-Person.class.isAnnotationPresent(PerformanceMonitored.class)
-Person.class.getAnnotation(PerformanceMonitored.class).value()
+AnotherPerson.class.isAnnotationPresent(PerformanceMonitored.class)
+AnotherPerson.class.getAnnotation(PerformanceMonitored.class).value()
 
-Generics
+// Generics
 
 class Pair<T1, T2> {
     T1 element1
@@ -171,27 +173,27 @@ interface Function<S,T>  {
     T op(S s)  
 }
 
-def adder = [op: { Pair<Integer, Integer> p -> p.element1 + p.element2 } ] as Function
+def adder = [op: { Pair<Integer, Integer> pair -> pair.element1 + pair.element2 } ] as Function
 
 adder.op(new Pair(element1: 1, element2: 2))
 
 // Loops
 
-for (int i = 0; i < n; i++) { } 
-for (Type item : iterable) { }
-for (item in iterable) { }
+// for (int i = 0; i < n; i++) { }
+// for (Type item : iterable) { }
+// for (item in iterable) { }
 
 // Groovy Truth
 
-if (1) // ...
-if (object) // ...
-if (collection) // ...
-if (map) // ...
-if (matcher) // ...
+// if (1) // ...
+// if (object) // ...
+// if (collection) // ...
+// if (map) // ...
+// if (matcher) // ...
 
 // Operator Overloading
 
-class Person {
+class Entity {
 
    def or(other)  {
       println other
@@ -201,7 +203,7 @@ class Person {
    String toString()  { "i am unique" }
 }
 
-def p = new Person()
-def p2 = new Person()
+def e = new Entity()
+def e2 = new Entity()
 
-p | p2
+e | e2

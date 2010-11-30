@@ -1,3 +1,10 @@
+import org.apache.commons.logging.Log
+import org.apache.commons.logging.LogFactory
+import java.lang.reflect.Method
+
+/**
+ * This is a workshop example for ORM mapping framework basics.
+ */
 class SessionFactory {
 
     private def storage
@@ -17,6 +24,8 @@ class SessionFactory {
 
 class Session {
 
+    static Log log = LogFactory.getLog(Session)
+
     private def sessionFactory
 
     def Session(def sessionFactory) { this.sessionFactory = sessionFactory }
@@ -27,20 +36,25 @@ class Session {
     
     def propertyChanged(def obj)  {
         if (!modifiedPersistentObjects[obj.getClass()]) modifiedPersistentObjects[obj.getClass()] = []
-        
+
         modifiedPersistentObjects[obj.getClass()] << obj.id
+
+        log.info "propertyChanged of object: ${obj} with id ${obj.id}"
     }
     
     def save(def obj) {
-        if (modifiedPersistentObjects[obj.getClass()] && modifiedPersistentObjects[obj.getClass()][obj.id])  {
-           // something changed
-           
-           // what changed? did a simple property change, did the contents of a relationship change? etc.
-           
-        } else if (!obj.metaClass.hasProperty("id"))  {
+        if (!obj.metaClass.hasProperty("id"))  {
+           log.info "Going to save transient object ${obj} ..."
            // this is a transient object
-           
-           // get the id for this object
+           def conn = sessionFactory.newStorageConnection()
+           def id = 1
+
+           if (conn[obj.getClass()]) id = conn[obj.getClass()].keySet().max() + 1
+           obj.metaClass.getId = { -> id }
+
+           identityMap[obj.getClass()][id] = obj
+
+           log.info "Attached ${obj} now has id ${obj.id}"
         }
     }
     
@@ -62,7 +76,9 @@ class Session {
     }
     
     def flush()  {
-        if (modifiedPersistentObjects) println "flushing ..."
+        if (modifiedPersistentObjects) {
+          snapshots.clear()
+        }
         
         clear()
     }
@@ -76,11 +92,9 @@ class Session {
     def close()  {
         flush()
         clear()
-        
-        println "session is cleared."
     }
     
-    def load(def domainClassType, Long identifier)  {
+    def load(Class<?> domainClassType, Long identifier)  {
         
         if (identityMap[domainClassType] && identityMap[domainClassType][identifier])  {
             return identityMap[domainClassType][identifier]
@@ -92,8 +106,13 @@ class Session {
         
         if (!snapshots[domainClassType]) snapshots[domainClassType] = [:]
         if (!identityMap[domainClassType]) identityMap[domainClassType] = [:]
-        
-        snapshots[domainClassType][identifier] = loadedObj.properties
+
+
+        def properties = loadedObj.getProperty("props")
+        snapshots[domainClassType][identifier] = properties.inject([:], { m, property -> m[property] = loadedObj[property]; m })
+
+        log.info "create snapshot of ${domainClassType} id ${identifier} with properties ${snapshots[domainClassType][identifier]}"
+
         identityMap[domainClassType][identifier] = loadedObj
         
         loadedObj.metaClass.getId = { -> identifier } 
@@ -120,6 +139,10 @@ def storage = [:]
 
 class Person {
     String name
+
+    String toString() { name }
+
+    static props = ['name']
 }
 
 storage[Person] = [:]
@@ -132,7 +155,5 @@ def session = sessionFactory.newSession()
 def person = session.load(Person, 1)
 person.name = 'Franz Xaver Gabler'
 
-session.discard()
-session.close()
-
-person.dump()
+person = new Person(name: 'John Doe')
+session.save(person)

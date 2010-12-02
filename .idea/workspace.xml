@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b7f3e9a-8fb9-43cb-8f24-e3d3f186a47a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/micro/MicroHibernate.groovy" afterPath="$PROJECT_DIR$/src/micro/MicroHibernate.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/transformers/gcontracts/Contracts.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/transformers/spock/SomeSpec.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gsamples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,19 +63,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MicroSpring.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/micro/MicroSpring.groovy">
+      <file leaf-file-name="SomeSpec.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/transformers/spock/SomeSpec.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="43" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
+            <state line="2" column="0" selection-start="28" selection-end="81" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MicroHibernate.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/micro/MicroHibernate.groovy">
+      <file leaf-file-name="Contracts.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/transformers/gcontracts/Contracts.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="96" selection-start="184" selection-end="184" vertical-scroll-proportion="0.07283237">
+            <state line="30" column="9" selection-start="667" selection-end="667" vertical-scroll-proportion="1.1052631">
               <folding />
             </state>
           </provider>
@@ -121,6 +123,9 @@
         <option value="$PROJECT_DIR$/src/essentials/Groovy Essential Data Types and Control Structures.groovy" />
         <option value="$PROJECT_DIR$/src/micro/MicroSpring.groovy" />
         <option value="$PROJECT_DIR$/src/micro/MicroHibernate.groovy" />
+        <option value="$PROJECT_DIR$/src/transformers/Spock.groovy" />
+        <option value="$PROJECT_DIR$/src/transformers/spock/SomeSpec.groovy" />
+        <option value="$PROJECT_DIR$/src/transformers/gcontracts/Contracts.groovy" />
       </list>
     </option>
   </component>
@@ -191,7 +196,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="micro" />
+              <option name="myItemId" value="transformers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -209,12 +214,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="micro" />
+              <option name="myItemId" value="transformers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MicroHibernate.groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <option name="myItemId" value="gcontracts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -272,18 +277,7 @@
       <recent name="essentials" />
     </key>
   </component>
-  <component name="RunManager" selected="Groovy Script.MicroSpring">
-    <configuration default="false" name="MiniHibernate" type="GroovyScriptRunConfiguration" factoryName="Groovy Script" temporary="true">
-      <module name="Gsamples" />
-      <setting name="path" value="$PROJECT_DIR$/src/mini/MiniHibernate.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="$PROJECT_DIR$/src/mini" />
-      <setting name="debug" value="false" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Groovy Script.Contracts">
     <configuration default="false" name="MiniSpring" type="GroovyScriptRunConfiguration" factoryName="Groovy Script" temporary="true">
       <module name="Gsamples" />
       <setting name="path" value="$PROJECT_DIR$/src/mini/MiniSpring.groovy" />
@@ -329,6 +323,17 @@
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="$PROJECT_DIR$/src/essentials" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Contracts" type="GroovyScriptRunConfiguration" factoryName="Groovy Script" temporary="true">
+      <module name="Gsamples" />
+      <setting name="path" value="$PROJECT_DIR$/src/transformers/gcontracts/Contracts.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$/src/transformers/gcontracts" />
       <setting name="debug" value="false" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -459,12 +464,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Groovy Script.MiniHibernate" />
-      <item index="1" class="java.lang.String" itemvalue="Groovy Script.MiniSpring" />
-      <item index="2" class="java.lang.String" itemvalue="Groovy Script.MicroSpring" />
-      <item index="3" class="java.lang.String" itemvalue="Groovy Script.MicroHibernate" />
-      <item index="4" class="java.lang.String" itemvalue="Groovy Script.Groovy Essential Data Types and Control Structures" />
+    <configuration default="false" name="SomeSpec" type="GroovyScriptRunConfiguration" factoryName="Groovy Script">
+      <module name="Gsamples" />
+      <setting name="path" value="$PROJECT_DIR$/src/transformers/spock/SomeSpec.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Groovy Script.MiniSpring" />
+      <item index="1" class="java.lang.String" itemvalue="Groovy Script.MicroSpring" />
+      <item index="2" class="java.lang.String" itemvalue="Groovy Script.MicroHibernate" />
+      <item index="3" class="java.lang.String" itemvalue="Groovy Script.Groovy Essential Data Types and Control Structures" />
+      <item index="4" class="java.lang.String" itemvalue="Groovy Script.SomeSpec" />
+      <item index="5" class="java.lang.String" itemvalue="Groovy Script.Contracts" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -504,9 +521,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495238" sideWeight="0.37248322" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495238" sideWeight="0.67002237" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2495238" sideWeight="0.67002237" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32997763" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -580,16 +597,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/micro/MicroSpring.groovy">
+    <entry file="file://$PROJECT_DIR$/src/micro/MicroHibernate.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="43" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
+        <state line="6" column="22" selection-start="212" selection-end="212" vertical-scroll-proportion="0.098265894">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/micro/MicroHibernate.groovy">
+    <entry file="file://$PROJECT_DIR$/src/micro/MicroSpring.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="96" selection-start="184" selection-end="184" vertical-scroll-proportion="0.07283237">
+        <state line="54" column="6" selection-start="1158" selection-end="1158" vertical-scroll-proportion="1.3109827">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transformers/spock/SomeSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="28" selection-end="81" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transformers/gcontracts/Contracts.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="9" selection-start="667" selection-end="667" vertical-scroll-proportion="1.1052631">
           <folding />
         </state>
       </provider>

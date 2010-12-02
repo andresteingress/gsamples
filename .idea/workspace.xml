@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b7f3e9a-8fb9-43cb-8f24-e3d3f186a47a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/micro/MicroSpring.groovy" afterPath="$PROJECT_DIR$/src/micro/MicroSpring.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/micro/MicroHibernate.groovy" afterPath="$PROJECT_DIR$/src/micro/MicroHibernate.groovy" />
     </list>
     <ignored path="gsamples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,10 +61,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MicroSpring.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MicroSpring.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/micro/MicroSpring.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="43" selection-start="2103" selection-end="2103" vertical-scroll-proportion="3.2789474">
+            <state line="89" column="43" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MicroHibernate.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/micro/MicroHibernate.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="96" selection-start="184" selection-end="184" vertical-scroll-proportion="0.07283237">
               <folding />
             </state>
           </provider>
@@ -109,9 +118,9 @@
         <option value="$PROJECT_DIR$/src/essentials/Groovy Closures, Syntactic Sugar and MOP.groovy" />
         <option value="$PROJECT_DIR$/src/mini/MiniSpring.groovy" />
         <option value="$PROJECT_DIR$/src/micro/MiniSpring.groovy" />
-        <option value="$PROJECT_DIR$/src/micro/MicroHibernate.groovy" />
         <option value="$PROJECT_DIR$/src/essentials/Groovy Essential Data Types and Control Structures.groovy" />
         <option value="$PROJECT_DIR$/src/micro/MicroSpring.groovy" />
+        <option value="$PROJECT_DIR$/src/micro/MicroHibernate.groovy" />
       </list>
     </option>
   </component>
@@ -184,10 +193,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="micro" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MicroSpring.groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -499,9 +504,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495238" sideWeight="0.37248322" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2495238" sideWeight="0.67002237" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495238" sideWeight="0.67002237" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32997763" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -561,11 +566,6 @@
         <state line="5" column="13" selection-start="149" selection-end="149" vertical-scroll-proportion="0.15412845" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/micro/MicroHibernate.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="83" selection-end="83" vertical-scroll-proportion="0.07368421" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/essentials/Groovy Essential Data Types and Control Structures.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="87" selection-start="1739" selection-end="1739" vertical-scroll-proportion="0.7017544">
@@ -582,7 +582,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/micro/MicroSpring.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="43" selection-start="2103" selection-end="2103" vertical-scroll-proportion="3.2789474">
+        <state line="89" column="43" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/micro/MicroHibernate.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="96" selection-start="184" selection-end="184" vertical-scroll-proportion="0.07283237">
           <folding />
         </state>
       </provider>

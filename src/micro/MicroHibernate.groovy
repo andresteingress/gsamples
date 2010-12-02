@@ -2,7 +2,7 @@ import org.apache.commons.logging.Log
 import org.apache.commons.logging.LogFactory
 
 /**
- * This is a workshop example for ORM mapping framework basics.
+ * This is a workshop example for ORM mapping framework basics and Fowler's patterns in practice.
  */
 class SessionFactory {
 

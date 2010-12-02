@@ -5,11 +5,11 @@ System.out.println("Hello, World!");
 println 'Hello, World!'
 
 String typedName = 'Andre Steingress';
-def name = 'Andre Steingress'
+def duckTypedName = 'Andre Steingress'
 
-println "Hi, my name is ${name}!"
+println "Hi, my name is ${duckTypedName}!"
 
-println """ Hi, my name is ${name} and
+println """ Hi, my name is ${typedName} and
 this is a rather long
 string """
 
@@ -58,25 +58,23 @@ def n4 = string.toBigDecimal()
 // Strings
 
 // normal strings
-def firstname = 'Kate'
+def firstname = 'Max'
 assert firstname instanceof String
 
-def surname = "Bush"
-assert firstname * 2 == 'KateKate'
+def surname = "Mustermann"
+assert firstname * 2 == 'MaxMax'
 def fullname = firstname + ' ' + surname
-assert fullname == 'Kate Bush'
+assert fullname == 'Max Mustermann'
 
 fullname = "$firstname $surname"
 assert fullname instanceof GString
-assert fullname == 'Kate Bush'
-assert fullname - firstname == ' Bush'
-assert fullname.padLeft(10) == ' Kate Bush'
+assert fullname == 'Max Mustermann'
+assert fullname - firstname == ' Mustermann'
 
 
 // more String operations
 
-assert 'string'.reverse() == 'gnirts'
-assert 'two words'.split().reverse().join(' ') == 'words two'
+assert 'andre'.reverse() == 'erdna'
 
 string = 'Yoda said, "can you see this?"'
 revwords = string.split(' ').reverse().join(' ')
@@ -124,8 +122,6 @@ println new Date() + 1.hour + 3.weeks - 2.days
 dateStr = "1998-06-03"
 date = Date.parse("yyyy-MM-dd", dateStr)
 println 'Date was ' + date.format("MMM/dd/yyyy")
-
-def holidays = boxingDay..newYearsEve
 
 // Collective Data Types
 

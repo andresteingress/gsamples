@@ -2,7 +2,7 @@ package micro
 
 class ImageService {
 
-  def imageLibraryServiceFacade
+  def imageOperations
 
   def void rescale(def image, float scale)  {
 
@@ -17,13 +17,27 @@ class ImageOperationsWithImageIOImpl {
 }
 
 
+// first attempt: create dependences inside the constructor
+/*class ImageService {
+
+  def imageOperations
+
+  def ImageService()  {
+    imageOperations = new ImageOperationsWithImageIOImpl()
+  }
+
+  def void rescale(def image, float scale)  {
+
+  }
+}*/
+
 
 // second attempt: create dependencies with a simple program initialization method using Dependency Injection
 
 def void init()  {
   def imageOperations = new ImageOperationsWithImageIOImpl()
   def imageService = new ImageService()
-  imageService.imageLibraryServiceFacade = imageOperations
+  imageService.imageOperations = imageOperations
 }
 
 // third attempt: Dependencies are configured via external configuration files
@@ -31,7 +45,7 @@ def void init()  {
 def configFile = """
    <beans>
       <bean id='imageService' class='micro.ImageService'>
-          <property name='imageLibraryServiceFacade' ref='nativeImageLibraryFacade'/>
+          <property name='imageOperations' ref='nativeImageLibraryFacade'/>
       </bean>
 
       <bean id='nativeImageLibraryFacade' class='micro.ImageOperationsWithImageIOImpl'/>
@@ -73,6 +87,4 @@ container.loadBeans configFile
 
 assert container.beanCache['nativeImageLibraryFacade'] != null
 assert container.beanCache['imageService'] != null
-assert container.beanCache['imageService']."imageLibraryServiceFacade" != null
-
-
+assert container.beanCache['imageService'].imageOperations

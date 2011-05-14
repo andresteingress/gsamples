@@ -63,4 +63,32 @@ class PreconditionASTTransformationTests extends GroovyTestCase {
             bankAccount.deposit(null)
         }
     }
+
+    void testCheckExistenceInClassFile()  {
+
+        TransformTestHelper tth = new TransformTestHelper(new PreconditionASTTransformation(), CompilePhase.SEMANTIC_ANALYSIS)
+
+        def bankAccountClass = tth.parse('''
+        import org.gr8conf.ast.*
+
+        class BankAccount {
+
+            def account = 0
+
+            @Precondition({ amount != null })
+            def deposit(def amount)  {
+                account += amount
+            }
+
+        }
+        ''')
+
+        def bankAccount = bankAccountClass.newInstance()
+
+        Precondition precondition = bankAccount.getClass().getMethod("deposit", [Object.class] as Class[]).getAnnotation(Precondition)
+        assert precondition != null
+
+        assert precondition.value() instanceof Class
+        assert precondition.value().toString() == "class BankAccount\$_deposit_closure1"
+    }
 }

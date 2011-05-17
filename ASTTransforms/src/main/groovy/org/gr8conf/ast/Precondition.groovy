@@ -4,10 +4,13 @@ import java.lang.annotation.ElementType
 import java.lang.annotation.Retention
 import java.lang.annotation.RetentionPolicy
 import java.lang.annotation.Target
+import org.codehaus.groovy.transform.GroovyASTTransformationClass
+import java.lang.annotation.Documented
 
+@Documented
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-// TODO implement
+@GroovyASTTransformationClass('org.gr8conf.ast.PreconditionASTTransformation')
 public @interface Precondition {
-    // TODO implement
+    Class value()
 }

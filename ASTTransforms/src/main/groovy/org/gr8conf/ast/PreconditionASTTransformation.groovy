@@ -11,6 +11,8 @@ import org.codehaus.groovy.control.SourceUnit
 import org.codehaus.groovy.control.messages.Message
 import org.codehaus.groovy.transform.ASTTransformation
 import org.codehaus.groovy.transform.GroovyASTTransformation
+import org.codehaus.groovy.ast.stmt.Statement
+import org.codehaus.groovy.ast.stmt.ExpressionStatement
 
 @GroovyASTTransformation(phase = CompilePhase.SEMANTIC_ANALYSIS)
 class PreconditionASTTransformation implements ASTTransformation {
@@ -43,18 +45,29 @@ class PreconditionASTTransformation implements ASTTransformation {
     }
 
     def extractClosureExpression(AnnotationNode annotationNode) {
-        // TODO implement
+        return annotationNode.getMember('value')
     }
 
     def extractBooleanExpression(ClosureExpression closureExpression)  {
-        // TODO implement
+        for (Statement stmt : closureExpression.getCode().getStatements())  {
+            if (stmt instanceof ExpressionStatement)  {
+                BooleanExpression result = new BooleanExpression(stmt.getExpression())
+                result.setSourcePosition closureExpression
+                result.setSynthetic true
+                return result
+            }
+        }
+        return null
     }
 
     def createAssertStatement(BooleanExpression booleanExpression)  {
-        // TODO implement
+        AssertStatement assertStatement = new AssertStatement(booleanExpression)
+        assertStatement.setSourcePosition booleanExpression
+
+        return assertStatement
     }
 
     def addAssertStatementToMethodCodeBlock(MethodNode methodNode, AssertStatement assertStatement) {
-        // TODO implement
+        methodNode.getCode().getStatements().add(0, assertStatement)
     }
 }

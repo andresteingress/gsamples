@@ -1,12 +1,46 @@
 apply plugin: 'groovy'
 apply plugin: 'idea'
 
+def groovyVersion = '1.8.0'
+def gContractsVersion = '1.2.3'
+
+configurations {
+    pmd
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.0'
+    groovy group: 'org.codehaus.groovy', name: 'groovy', version: groovyVersion
 
-    compile group: 'org.gcontracts', name: 'gcontracts-core', version: '1.2.2'
+    compile group: 'org.gcontracts', name: 'gcontracts-core', version: gContractsVersion
+
+    pmd group: 'org.gcontracts', name: 'gcontracts-doc', version: gContractsVersion
+    pmd group: 'org.codehaus.groovy', name: 'groovy-all', version: groovyVersion
+}
+
+task groovyDoc << {
+    ant.taskdef(name: "groovydoc", classname: "org.gcontracts.doc.ContractGroovyDoc", classpath: configurations.pmd
+            .asPath)
+    ant.groovydoc(
+            destdir      : "docs/gapi",
+            sourcepath   : "src/main/groovy",
+            packagenames : "**.*",
+            use          : "true",
+            windowtitle  : "Bank Account Example",
+            doctitle     : "Bank Account Example",
+            header       : "Bank Account Example",
+            footer       : "Bank Account Example",
+           overview     : "src/main/overview.html",
+           private      : "false",
+          {
+             link(packages:"java.,org.xml.,javax.,org.xml.",href:"http://download.oracle.com/javase/6/docs/api")
+             link(packages:"groovy.,org.codehaus.groovy.",  href:"http://groovy.codehaus.org/api")
+             link(packages:"org.apache.tools.ant.",         href:"http://evgeny-goldin.org/javadoc/ant/api")
+             link(packages:"org.junit.,junit.framework.",   href:"http://kentbeck.github.com/junit/javadoc/latest")
+             link(packages:"org.codehaus.gmaven.",          href:"http://evgeny-goldin.org/javadoc/gmaven")
+          }
+    )
 }

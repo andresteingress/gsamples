@@ -1,8 +1,5 @@
 package org.gr8conf.gc
 
-/**
- * @author andre.steingress@gmail.com
- */
 class AccountTests extends GroovyTestCase {
 
     void testDeposit() {
@@ -13,19 +10,26 @@ class AccountTests extends GroovyTestCase {
 
         assert account.balance == 30.0
 
-        account.deposit(-35.0)
+        account.withdraw 30.0
         account.deposit 5.0
 
-        assert account.balance == 0.0
+        assert account.balance == 5.0
     }
 
     void testWithdraw()  {
 
         def account = new Account()
-        account.withdraw 30.0
-        account.withdraw(-40.0)
+        account.deposit(40.0)
+        account.withdraw(40.0)
 
         assert account.balance == 0.0
     }
 
+    void testBetterAccountWithdraw()  {
+
+        def account = new BetterAccount()
+        account.withdraw(40.0)
+
+        assert account.balance == -40.0
+    }
 }

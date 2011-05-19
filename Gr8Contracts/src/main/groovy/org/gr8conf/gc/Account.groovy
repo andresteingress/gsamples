@@ -1,31 +1,30 @@
 package org.gr8conf.gc
 
-/**
- * @author andre.steingress@gmail.com
- */
+import org.gcontracts.annotations.Ensures
+import org.gcontracts.annotations.Requires
+
 class Account {
 
-    private def balance = 0.0
+    protected BigDecimal balance = 0.0
 
     def Account( def amount = 0.0 )
     {
         balance = amount
     }
 
+    @Requires({ amount >= 0.0 })
+    @Ensures({ balance == old.balance + amount })
     void deposit( def amount )
     {
         balance += amount
     }
 
-    double withdraw( def amount )
+    @Requires({ amount >= 0.0 && balance >= amount })
+    @Ensures({ result == amount && balance == old.balance - amount })
+    def withdraw( def amount )
     {
-        if (balance >= amount)
-        {
-            balance -= amount
-            return amount
-        }
-
-        return 0.0
+        balance -= amount
+        return amount
     }
 
     def getBalance()
